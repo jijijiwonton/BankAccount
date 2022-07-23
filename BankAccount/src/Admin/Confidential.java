@@ -1,5 +1,20 @@
 package Admin;
 
-public class Confidential {
+import java.util.ArrayList;
 
+import BankAccount.Account;
+
+interface Confidential {
+	
+	ArrayList<Account> manageAccount = new ArrayList<Account>();
+	
+	boolean isUserExist(Account account);
+	
+	String uniqueNumberGenerator();
+	
+	boolean _isNumberUnique(String number);
+	
+	ArrayList<Account> accessAccount(Object obj);
+	
+	boolean isBalanceSufficient(Account user, double money);
 }
