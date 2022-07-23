@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 import Admin.Administrator;
 
-public class Transaction extends Account {
+public class Transaction {
 	
 	Administrator admin = new Administrator();
 	Scanner input = new Scanner(System.in);
 	
-	public Transaction(Account account) {
-		super(account);
+	// Default constructor
+	public Transaction() {
 	}
 	
 	// TODO: after implementing code in 2 classes

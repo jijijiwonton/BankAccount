@@ -10,9 +10,11 @@ public class Account {
 	private String userPassword;
 	private double balance;
 	
+	Administrator admin = new Administrator();
+	
 	// Create an overloaded constructor for general case
-	public Account(String number, String userName, String userPassword, double balance) {
-		setNumber(number);
+	public Account(String userName, String userPassword, double balance) {
+		this.number = admin.uniqueNumberGenerator();
 		setUserName(userName);
 		setUserPassword(userPassword);
 		setBalance(balance);
@@ -20,10 +22,10 @@ public class Account {
 	
 	// Create an overloaded constructor for specific case
 	public Account(Account account) {
-		setNumber(account.getNumber());
-		setUserName(account.getUserName());
-		setUserPassword(account.getUserPassword());
-		setBalance(account.getBalance());
+		this.number = account.getNumber();
+		setUserName(account.getNumber());
+		setUserPassword(account.userPassword);
+		setBalance(account.balance);
 	}
 
 	/**
@@ -33,15 +35,7 @@ public class Account {
 	public String getNumber() {
 		return number;
 	}
-	
-	/**
-	 * Set user account number
-	 * @param unique number
-	 */
-	public void setNumber(String number) {
-		this.number = number;
-	}
-	
+
 	/**
 	 * Get user name
 	 * @return user name
@@ -106,7 +100,7 @@ public class Account {
 	
 	/**
 	 * Get user account details
-	 * @return
+	 * @return account details
 	 */
 	public String getAccountDetails() {
 		return "User name: " + getUserName() + "\n" +

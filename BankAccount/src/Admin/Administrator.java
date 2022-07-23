@@ -33,7 +33,7 @@ public class Administrator implements Confidential {
 		String n = null;
 		boolean isNumberUnique = false;
 		while(!isNumberUnique) {
-			n = String.valueOf(r.nextInt());
+			n = String.valueOf(Math.abs(r.nextInt()));
 			isNumberUnique = _isNumberUnique(n);
 		} return n;
 	}
