@@ -1,8 +1,12 @@
 package BankAccount;
 
+import java.util.Scanner;
+
 import Admin.Administrator;
 
 public class Account {
+	
+	Scanner input = new Scanner(System.in);
 	
 	// Define a global variable
 	private String number;
@@ -71,7 +75,19 @@ public class Account {
 		}
 		if(userPassword.length() < validLength) {
 			throw new Error("Password " + InternalSystem.LENGTH_ERROR + validLength);
-		} this.userPassword = userPassword;
+		} 
+		
+		// Confirm user password
+		System.out.print("Please enter your password again: ");
+		String confirm = input.next();
+		
+		boolean isMatched = userPassword.equals(confirm) ? true : false;
+		
+		if(isMatched) {
+			this.userPassword = userPassword;
+		} else {
+			throw new Error("Confirmed password doesnt match");
+		}
 	}
 	
 	/**
