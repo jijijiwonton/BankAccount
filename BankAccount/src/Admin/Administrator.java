@@ -2,11 +2,15 @@ package Admin;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 import BankAccount.Account;
+import BankAccount.BankAccount;
 import BankAccount.InternalSystem;
 
 public class Administrator implements Confidential {
+	
+	Scanner input = new Scanner(System.in);
 
 	@Override
 	/**
@@ -109,6 +113,20 @@ public class Administrator implements Confidential {
 		for(Account a: lists) {
 			funds += a.getBalance();
 		} return funds;
+	}
+
+	/**
+	 * Modify user's info (currently, user name only available)
+	 */
+	@Override
+	public String modifyUserInfo(Account account) {
+		System.out.println("You can modify your user name");
+		System.out.println("Currenctly the registered name is: " + account.getUserName() + "\n");
+		System.out.print("Enter your new name: ");
+		account.setUserName(input.next());
+		
+		System.out.println("---------- The registered details");
+		return account.getAccountDetails();
 	}
 
 }

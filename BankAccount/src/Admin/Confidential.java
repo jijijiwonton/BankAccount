@@ -17,4 +17,6 @@ interface Confidential {
 	ArrayList<Account> accessAccount(Object obj);
 	
 	boolean isBalanceSufficient(Account user, double money);
+	
+	String modifyUserInfo(Account account);
 }

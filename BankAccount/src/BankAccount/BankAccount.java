@@ -26,26 +26,28 @@ public class BankAccount {
 		case ADD_USER:
 			System.out.print("Enter your name please: ");
 			String userName = input.next();
-			System.out.println("Enter your password please (Password CANNOT include user name and the length MUST be over 8: ");
+			System.out.print("Enter your password please (Password CANNOT include user name and the length MUST be over 8) ");
 			String userPassword = input.next();
-			System.out.println("If you want to deposit initial money, enter money or enter 0: ");
+			System.out.print("If you want to deposit initial money, enter money or enter 0: ");
 			double userInitialBalance = input.nextDouble();
 			
 			// User account registeration process
 			Account newUser = new Account(userName, userPassword, userInitialBalance);
 			
+			System.out.println();
 			// Confirm user information
-			System.out.println(newUser.getAccountDetails());
+			System.out.println(newUser.getAccountDetails() + "\n");
 			
-			System.out.println("If your information is right, enter 'yes' please");
+			System.out.print("If your information is right, enter 'yes' please > ");
 			String userConfirm = input.next().toLowerCase();
 			
 			boolean isConfirmed = userConfirm.equals("yes") ? true : false;
 			
 			if(isConfirmed) {
 				admin.addUser(newUser);
+			} else {
+				System.out.println(admin.modifyUserInfo(newUser));
 			}
-			
 		}
 	}
 	
@@ -61,7 +63,7 @@ public class BankAccount {
 		
 		// User option whether keep doing an action for bank account or quitting program
 		option = input.nextInt();
-		
+
 		// TODO: Validation
 		if(option != QUIT_PROGRAM && option != ADD_USER && option != DEPOSIT_MONEY && option != WITHDRAW_MONEY) {
 			// TODO: Custom exception needed
