@@ -10,7 +10,6 @@ import BankAccount.Account;
 class AdministratorTest {
 
 	Administrator admin = new Administrator();
-	ArrayList<Account> manageAccount = admin.accessAccount(new Administrator());
 	
 	/**
 	 * Verify a user exists

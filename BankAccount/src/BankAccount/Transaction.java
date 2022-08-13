@@ -29,7 +29,7 @@ public class Transaction {
 				account.setBalance(beforeDeposit += moneyToDeposit);
 				return moneyToDeposit;
 		} else {
-			throw new Error(InternalSystem.NO_USER_EXIST);
+			throw new IllegalArgumentException(InternalSystem.NO_USER_EXIST);
 		}
 	}
 	
