@@ -35,14 +35,6 @@ class AdministratorTest {
 	}
 
 	/**
-	 * Verify to generate a random number
-	 */
-	@Test
-	void testUniqueNumberGenerator() {
-		
-	}
-
-	/**
 	 * Verify the number is unique
 	 */
 	@Test
@@ -115,18 +107,18 @@ class AdministratorTest {
 	}
 	
 	/**
-	 * Verify user can be added
+	 * Verify to view all available funds
 	 */
 	@Test
-	void testAddUser() {
-	}
-
-	@Test
 	void testTotalFunds() {
+		Account testAccount1 = new Account("Jiwon1", "12345678", 2500);
+		Account testAccount2 = new Account("Jiwon2", "12345678", 2500);
+		
+		admin.addUser(testAccount1);
+		admin.addUser(testAccount2);
+		
+		double totalFunds = admin.totalFunds();
+		
+		assertEquals(totalFunds, 5000);
 	}
-
-	@Test
-	void testModifyUserInfo() {
-	}
-
 }
