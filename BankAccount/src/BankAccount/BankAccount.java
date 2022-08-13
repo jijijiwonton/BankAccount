@@ -51,6 +51,10 @@ public class BankAccount {
 		}
 	}
 	
+	/**
+	 * A private helper method to store user input
+	 * @return
+	 */
 	private int _userInput() {
 		int option;
 		

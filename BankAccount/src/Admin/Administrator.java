@@ -1,12 +1,10 @@
 package Admin;
 
-import java.nio.file.AccessDeniedException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 import BankAccount.Account;
-import BankAccount.BankAccount;
 import BankAccount.InternalSystem;
 
 public class Administrator implements Confidential {
