@@ -89,10 +89,31 @@ class AdministratorTest {
 		});		
 	}
 
+	/**
+	 * Verify to withdraw money with sufficient balance
+	 */
 	@Test
-	void testIsBalanceSufficient() {
+	void testIsBalanceSufficientValidCase() {
+		Account testAccount = new Account("Jiwon", "12345678", 2500);
+		admin.addUser(testAccount);
+		boolean isBalanceSufficient = admin.isBalanceSufficient(testAccount, 2500);
+		
+		assertEquals(isBalanceSufficient, true);		
 	}
-
+	
+	/**
+	 * Verify not to withdraw money with insufficient balance
+	 */
+	@Test
+	void testIsBalanceSufficientInvalidCase() {
+		Account testAccount = new Account("Jiwon", "12345678", 2500);
+		admin.addUser(testAccount);
+		
+		assertThrows(IllegalArgumentException.class, () -> {
+			admin.isBalanceSufficient(testAccount, 3000);
+		});		
+	}
+	
 	/**
 	 * Verify user can be added
 	 */

@@ -77,8 +77,8 @@ public class Administrator implements Confidential {
 	 * @return If the money's of the user is sufficient true, otherwise false
 	 */
 	public boolean isBalanceSufficient(Account account, double money) {
-		if(account.getBalance() > money) {
-			throw new Error(InternalSystem.BALANCE_INSUFFICIENT);
+		if(money > account.getBalance()) {
+			throw new IllegalArgumentException(InternalSystem.BALANCE_INSUFFICIENT);
 		} else {
 			return true;
 		}
