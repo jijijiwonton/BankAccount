@@ -38,17 +38,17 @@ public class Administrator implements Confidential {
 		boolean isNumberUnique = false;
 		while(!isNumberUnique) {
 			n = String.valueOf(Math.abs(r.nextInt()));
-			isNumberUnique = _isNumberUnique(n);
+			isNumberUnique = isNumberUnique(n);
 		} return n;
 	}
 
 	@Override
 	/**
-	 * A helper method to determine an unique number
+	 * A method to verify an unique number
 	 * @param random number
 	 * @return If the number is unique true, otherwise false
 	 */
-	public boolean _isNumberUnique(String number) {
+	public boolean isNumberUnique(String number) {
 		ArrayList<Account> lists = accessAccount(new Administrator());
 		for(Account a: lists) {
 			if(a.getNumber().equals(number)) {

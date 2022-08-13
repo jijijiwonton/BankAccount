@@ -12,7 +12,7 @@ interface Confidential {
 	
 	String uniqueNumberGenerator();
 	
-	boolean _isNumberUnique(String number);
+	boolean isNumberUnique(String number);
 	
 	ArrayList<Account> accessAccount(Object obj);
 	
