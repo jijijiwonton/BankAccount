@@ -46,10 +46,10 @@ public class Transaction {
 				user.setBalance(beforeWithdraw -= moneyToWithdraw);
 				return moneyToWithdraw;
 			} else {
-				throw new Error(InternalSystem.BALANCE_INSUFFICIENT);
+				throw new IllegalArgumentException(InternalSystem.BALANCE_INSUFFICIENT);
 			}
 		} else {
-			throw new Error(InternalSystem.NO_USER_EXIST);
+			throw new IllegalArgumentException(InternalSystem.NO_USER_EXIST);
 		}
 	}
 	

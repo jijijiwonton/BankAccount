@@ -59,19 +59,29 @@ class TransactionTest {
 
 	/**
 	 * Verify withdraw function for invalid case
-	 * Insufficient balance
+	 * Insufficient balance that returns IllegalArgumentException error
 	 */
 	@Test
 	void testWithdrawForInsufficientBalance() {
+		Account testAccount = new Account("Jiwon", "12345678", 2500);
+		admin.addUser(testAccount);
 		
+		assertThrows(IllegalArgumentException.class, () -> {
+			System.out.println("Junit testing ... input should be more than 2500 for an invalid case");
+			transaction.withdraw(testAccount);
+		});
 	}
 	
 	/**
 	 * Verify withdraw function for invalid case
-	 * The user doesn't exist that returns Illegal
+	 * The user doesn't exist that returns IllegalArgumentException error
 	 */
 	@Test
 	void testWithdrawForNoUserExist() {
+	Account testAccount = null;
 		
+		assertThrows(IllegalArgumentException.class, () -> {
+			transaction.withdraw(testAccount);
+		});	
 	}
 }
