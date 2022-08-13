@@ -1,5 +1,6 @@
 package Admin;
 
+import java.nio.file.AccessDeniedException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -19,12 +20,12 @@ public class Administrator implements Confidential {
 	 * @return If the user exists true, otherwise false
 	 */
 	public boolean isUserExist(Account account) {
-		ArrayList<Account> list = accessAccount(new Administrator());
-		for(Account a: list) {
+		ArrayList<Account> lists = accessAccount(new Administrator());
+		for(Account a: lists) {
 			if(a.equals(account)) {
 				return true;
 			}
-		} throw new Error(InternalSystem.NO_USER_EXIST);
+		} throw new IllegalArgumentException(InternalSystem.NO_USER_EXIST);
 	}
 
 	@Override
@@ -66,7 +67,7 @@ public class Administrator implements Confidential {
 		if(obj instanceof Administrator) {
 			return manageAccount;
 		} else {
-			throw new Error(InternalSystem.ACCESS_DECLINED);
+			throw new IllegalArgumentException(InternalSystem.ACCESS_DECLINED);
 		}
 	}
 
