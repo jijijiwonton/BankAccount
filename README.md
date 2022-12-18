@@ -9,21 +9,21 @@ A basic Java console program, QA is verified by Junit test.
 Register user information / transaction (deposit / withdraw ) / Manage user account as an admin.
 
 ## Folder Structure
-/BankAccount
-|-BankAccount/src
- |-Admin
-  |-Administrator.java
-  |-AdministratorTest.java
-  |-Confidential.java
- |-BankAccount
-  |-Account.java
-  |-BankAccount.java
-  |-Expense.java
-  |-Income.java
-  |-InternalSystem.java
-  |-Main.java
-  |-Transaction.java
-  |-TransactionTest.java
+/BankAccount \n
+|-BankAccount/src \n
+ |-Admin \n
+  |-Administrator.java \n
+  |-AdministratorTest.java \n
+  |-Confidential.java \n
+ |-BankAccount \n
+  |-Account.java \n
+  |-BankAccount.java \n
+  |-Expense.java \n
+  |-Income.java \n
+  |-InternalSystem.java \n
+  |-Main.java \n
+  |-Transaction.java \n
+  |-TransactionTest.java \n
   
  * Administrator class implements Confidential interface
  * Confidential interface has some abstract methods
