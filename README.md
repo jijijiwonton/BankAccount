@@ -12,18 +12,18 @@ Register user information / transaction (deposit / withdraw ) / Manage user acco
 |BankAccount</br> 
 &nbsp;|BankAccount/src</br>
 &emsp;|Admin</br> 
-&emsp;&nbsp;|-Administrator.java</br> 
-&emsp;&nbsp;|-AdministratorTest.java</br> 
-&emsp;&nbsp;|-Confidential.java</br> 
+&emsp;&emsp;|-Administrator.java</br> 
+&emsp;&emsp;|-AdministratorTest.java</br> 
+&emsp;&emsp;|-Confidential.java</br> 
 &emsp;|BankAccount</br> 
-&emsp;&nbsp;|-Account.java</br> 
-&emsp;&nbsp;|-BankAccount.java</br> 
-&emsp;&nbsp;|-Expense.java</br> 
-&emsp;&nbsp;|-Income.java</br> 
-&emsp;&nbsp;|-InternalSystem.java</br> 
-&emsp;&nbsp;|-Main.java</br> 
-&emsp;&nbsp;|-Transaction.java</br>
-&emsp;&nbsp;|-TransactionTest.java</br> 
+&emsp;&&emsp;|-Account.java</br> 
+&emsp;&emsp;|-BankAccount.java</br> 
+&emsp;&emsp;|-Expense.java</br> 
+&emsp;&emsp;|-Income.java</br> 
+&emsp;&emsp;|-InternalSystem.java</br> 
+&emsp;&emsp;|-Main.java</br> 
+&emsp;&&emsp;|-Transaction.java</br>
+&emsp;&emsp;|-TransactionTest.java</br> 
   
  * Administrator class implements Confidential interface</br>
  * Confidential interface has some abstract methods</br>
