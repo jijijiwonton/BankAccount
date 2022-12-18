@@ -9,13 +9,13 @@ A basic Java console program, QA is verified by Junit test.</br>
 Register user information / transaction (deposit / withdraw ) / Manage user account as an admin.</br>
 
 ## Folder Structure
-/BankAccount</br> 
-|-BankAccount/src</br>
- |-Admin</br> 
+|BankAccount</br> 
+|BankAccount/src</br>
+ |Admin/</br> 
   |-Administrator.java</br> 
   |-AdministratorTest.java</br> 
   |-Confidential.java</br> 
- |-BankAccount</br> 
+ |BankAccount/</br> 
   |-Account.java</br> 
   |-BankAccount.java</br> 
   |-Expense.java</br> 
