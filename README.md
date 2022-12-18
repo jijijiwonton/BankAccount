@@ -11,19 +11,19 @@ Register user information / transaction (deposit / withdraw ) / Manage user acco
 ## Folder Structure
 |BankAccount</br> 
 &nbsp;|BankAccount/src</br>
- &nbsp;|Admin/</br> 
-  &nbsp;|-Administrator.java</br> 
-  &nbsp;|-AdministratorTest.java</br> 
-  &nbsp;|-Confidential.java</br> 
- |BankAccount/</br> 
-  |-Account.java</br> 
-  |-BankAccount.java</br> 
-  |-Expense.java</br> 
-  |-Income.java</br> 
-  |-InternalSystem.java</br> 
-  |-Main.java</br> 
-  |-Transaction.java</br>
-  |-TransactionTest.java</br> 
+&nbsp;|Admin</br> 
+&emsp;|-Administrator.java</br> 
+&emsp;|-AdministratorTest.java</br> 
+&emsp;|-Confidential.java</br> 
+&nbsp;|BankAccount</br> 
+&emsp;|-Account.java</br> 
+&emsp;|-BankAccount.java</br> 
+&emsp;|-Expense.java</br> 
+&emsp;|-Income.java</br> 
+&emsp;|-InternalSystem.java</br> 
+&emsp;|-Main.java</br> 
+&emsp;|-Transaction.java</br>
+&emsp;|-TransactionTest.java</br> 
   
  * Administrator class implements Confidential interface</br>
  * Confidential interface has some abstract methods</br>
