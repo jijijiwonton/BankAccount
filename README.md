@@ -9,7 +9,7 @@ A basic Java console program, QA is verified by Junit test.</br>
 Register user information / transaction (deposit / withdraw ) / Manage user account as an admin.</br>
 
 ## Folder Structure
-|BankAccount</br> 
+BankAccount</br> 
 &nbsp;|BankAccount/src</br>
 &emsp;|Admin</br> 
 &emsp;&emsp;|-Administrator.java</br> 
