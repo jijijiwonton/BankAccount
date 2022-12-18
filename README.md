@@ -10,11 +10,11 @@ Register user information / transaction (deposit / withdraw ) / Manage user acco
 
 ## Folder Structure
 |BankAccount</br> 
-|BankAccount/src</br>
- |Admin/</br> 
-  |-Administrator.java</br> 
-  |-AdministratorTest.java</br> 
-  |-Confidential.java</br> 
+&nbsp;|BankAccount/src</br>
+ &nbsp;|Admin/</br> 
+  &nbsp;|-Administrator.java</br> 
+  &nbsp;|-AdministratorTest.java</br> 
+  &nbsp;|-Confidential.java</br> 
  |BankAccount/</br> 
   |-Account.java</br> 
   |-BankAccount.java</br> 
